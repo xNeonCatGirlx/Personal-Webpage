@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111728">
+  <title>Synthwave Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="bg-frame">
+    <div class="starfield"></div>
+    <div class="horizon-grid"></div>
+    <div class="glass-panel">
+      <header class="topbar">
+        <div class="logo-mark" aria-hidden="true">//</div>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="pill" href="#contact">Available</a>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div>
+            <p class="eyebrow">Synthwave Portfolio</p>
+            <h1>
+              <span class="glow">Your Name</span>
+              <span class="subhead">Designer / Developer / Dreamer</span>
+            </h1>
+            <p class="lede">
+              I craft vibrant digital experiences that blend neon energy with thoughtful, human-centered design.
+              From concept to code, I build interfaces that feel bold, polished, and unmistakably yours.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#work">View Work</a>
+              <a class="btn ghost" href="#contact">Let’s Talk</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="badge">Now booking projects</div>
+            <div class="stat">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">Products launched</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">8 yrs</div>
+              <div class="stat-label">Design & build</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">5.0</div>
+              <div class="stat-label">Client satisfaction</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-head">
+            <p class="eyebrow">About</p>
+            <h2>Craft with neon clarity</h2>
+          </div>
+          <div class="two-col">
+            <p>
+              I design and develop products that feel like the future: crisp typography, cinematic gradients, and
+              interactions that hum with intention. I thrive at the intersection of product thinking and engineering,
+              shipping experiences that are performant, accessible, and visually memorable.
+            </p>
+            <div class="tag-grid">
+              <span class="tag">Product design</span>
+              <span class="tag">Frontend architecture</span>
+              <span class="tag">Design systems</span>
+              <span class="tag">Web animations</span>
+              <span class="tag">Prototyping</span>
+              <span class="tag">Accessibility</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="work">
+          <div class="section-head">
+            <p class="eyebrow">Featured work</p>
+            <h2>Recent highlights</h2>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-top">
+                <p class="card-kicker">2025 · Product</p>
+                <h3>Neon Commerce</h3>
+                <p class="card-copy">A high-voltage e-commerce experience with immersive storytelling, adaptive layouts, and frictionless checkout.</p>
+              </div>
+              <div class="card-meta">
+                <span>Role: Design & Frontend</span>
+                <span>Stack: TypeScript, React, GSAP</span>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <p class="card-kicker">2024 · Platform</p>
+                <h3>Pulse OS</h3>
+                <p class="card-copy">A dashboard that visualizes live telemetry with retro-futurist flair and crystal-clear data hierarchy.</p>
+              </div>
+              <div class="card-meta">
+                <span>Role: Product Design</span>
+                <span>Stack: Figma, ProtoPie</span>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-top">
+                <p class="card-kicker">2023 · Experience</p>
+                <h3>Midnight FM</h3>
+                <p class="card-copy">A curated audio journey with dynamic gradients, responsive art direction, and tactile controls.</p>
+              </div>
+              <div class="card-meta">
+                <span>Role: Creative Direction</span>
+                <span>Stack: WebGL, Three.js</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>Let’s build something vivid</h2>
+          </div>
+          <div class="contact-grid">
+            <div>
+              <p>
+                Tell me about your product, your audience, and the feeling you want to evoke. I’ll respond with ideas,
+                timelines, and a clear path forward.
+              </p>
+              <div class="contact-meta">
+                <span>Email</span>
+                <a href="mailto:you@example.com">you@example.com</a>
+              </div>
+              <div class="contact-meta">
+                <span>Social</span>
+                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a href="https://www.dribbble.com" target="_blank" rel="noreferrer">Dribbble</a>
+                <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+              </div>
+            </div>
+            <form class="contact-form">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required>
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@example.com" required>
+              </label>
+              <label>
+                Project vision
+                <textarea name="message" rows="4" placeholder="What are you building?" required></textarea>
+              </label>
+              <button type="submit" class="btn primary">Send message</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Built with neon energy.</span>
+        <span>Based on synthwave vibes.</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
