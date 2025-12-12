@@ -193,11 +193,11 @@
               <h3>Motherboard</h3>
               <p>ROG Strix X570-I Gaming</p>
             </a>
-            <a class="spec-card" href="https://www.techpowerup.com/search/?q=YESTARRY%20650W" target="_blank" rel="noreferrer">
+            <div class="spec-card">
               <h3>PSU</h3>
               <p>YESTARRY 650W SFX </p>
               <p>80+ Gold</p>
-            </a>
+            </div>
           </div>
         </section>
 
@@ -237,8 +237,8 @@
 
       <footer class="footer">
         <span>Built with neon energy.</span>
-        <span>Based on synthwave vibes.</span>
         <span>© 2025 David Yang. All rights reserved.</span>
+        <span>Based on synthwave vibes.</span>
       </footer>
     </div>
   </div>
@@ -292,6 +292,30 @@
         document.body.classList.toggle('sidebar-visible', !entry.isIntersecting);
       });
       observer.observe(sentinel);
+    }
+
+    // Highlight active sidebar link with a dot when the section is in view.
+    const sideLinks = Array.from(document.querySelectorAll('.side-nav a'));
+    const sections = sideLinks
+      .map((link) => document.querySelector(link.getAttribute('href')))
+      .filter(Boolean);
+
+    if (!isPhone && sections.length && sideLinks.length) {
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.id;
+            sideLinks.forEach((link) => {
+              const match = link.getAttribute('href') === `#${id}`;
+              link.classList.toggle('active', match);
+            });
+          });
+        },
+        { rootMargin: '-40% 0px -40% 0px', threshold: 0.3 }
+      );
+
+      sections.forEach((section) => sectionObserver.observe(section));
     }
 
     // Steam recent games pull (uses your Steam Web API key + SteamID64).

@@ -526,11 +526,11 @@ h1 {
   transform: translate(140%, -50%);
   background: rgba(12, 18, 36, 0.92);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45);
-  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  padding: 8px;
   display: grid;
-  gap: 10px;
+  gap: 6px;
   z-index: 4;
   transition: transform 0.3s ease;
 }
@@ -540,8 +540,32 @@ h1 {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  margin: 0;
+}
+
+.side-nav a::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: scale(0);
+  opacity: 0;
+  box-shadow: 0 0 0 rgba(46, 243, 255, 0.0);
+  transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+}
+
+.side-nav a.active::before {
+  transform: scale(1);
+  opacity: 1;
+  box-shadow: 0 0 12px rgba(46, 243, 255, 0.7);
 }
 
 body.sidebar-visible .side-nav {
