@@ -241,6 +241,28 @@ h1 {
   gap: 10px;
 }
 
+#hobby .tag-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#hobby .tag {
+  min-height: 72px;
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  #hobby .tag-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  #hobby .tag {
+    min-height: 48px;
+    font-size: 14px;
+  }
+}
+
 .tag {
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.04);
@@ -472,7 +494,7 @@ h1 {
 
 .shots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -483,7 +505,19 @@ h1 {
   background: rgba(11, 16, 35, 0.9);
   box-shadow: var(--shadow);
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto;
+}
+
+@media (max-width: 900px) {
+  .shots-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .shots-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .shot-card img {
@@ -491,12 +525,6 @@ h1 {
   height: 160px;
   object-fit: cover;
   display: block;
-}
-
-.shot-card p {
-  margin: 0;
-  padding: 12px 14px 14px;
-  color: var(--muted);
 }
 
 .project-card {
@@ -587,6 +615,29 @@ body.sidebar-visible .glass-panel {
   justify-content: space-between;
   flex-wrap: wrap;
   font-size: 14px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
 }
 
 @keyframes twinkle {
