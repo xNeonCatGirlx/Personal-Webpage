@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#111728">
   <title>David Yang Portfolio</title>
+  <meta property="og:title" content="David Yang Portfolio" />
+  <meta property="og:description" content="A interest site about David Yang's daily life, tech projects, and adventures." />
+  <meta property="og:url" content="https://ncgdrive.site/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/xNeonCatGirlx/xNeonCatGirlx.github.io/refs/heads/main/web.ico">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -17,85 +21,89 @@
     <div class="glass-panel">
       <header class="topbar">
         <div class="logo-mark" aria-hidden="true">//</div>
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#work">Featured work</a>
-          <a href="#hobby">Hobby</a>
-          <a href="#shots">Shots</a>
-          <a href="#specs">Rig</a>
-          <a href="#games">Recent games</a>
-          <a href="#social">Social</a>
-        </nav>
+        <div class="top-controls">
+          <nav class="nav">
+            <a data-i18n="nav.about" href="#about">About</a>
+            <a data-i18n="nav.work" href="#work">Featured work</a>
+            <a data-i18n="nav.hobby" href="#hobby">Hobby</a>
+            <a data-i18n="nav.shots" href="#shots">Shots</a>
+            <a data-i18n="nav.specs" href="#specs">Rig</a>
+            <a data-i18n="nav.social" href="#social">Social</a>
+          </nav>
+          <button class="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to Chinese">中文</button>
+        </div>
       </header>
+
+      <button class="lang-toggle mobile-lang-toggle" type="button" aria-pressed="false" aria-label="Switch to Chinese">中文</button>
 
       <div class="sidebar-sentinel" aria-hidden="true"></div>
 
       <main>
         <section class="hero" id="hero">
           <div>
-            <p class="eyebrow">Welcome to home page of</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Welcome to home page of</p>
             <h1>
               <span class="glow">David Yang</span>
-              <span class="alias">aka NeonCatGirl</span>
-              <span class="subhead">Student / Linux User / Pilot / Tech Enthusiast</span>
+              <span class="alias" data-i18n="hero.alias">aka NeonCatGirl</span>
+              <span class="subhead" data-i18n="hero.subhead">Student / Linux User / Pilot / Tech Enthusiast</span>
             </h1>
-            <p class="lede">
+            <p class="lede" data-i18n="hero.lede">
               I am a passionate student and tech enthusiast who loves exploring the latest in technology, flying planes, and sharing my journey online. Especially fond of overclocking and building custom PCs. Recently setting up a open source cloud drive for personal use.
             </p>
             <div class="actions">
-              <a class="btn primary" href="#work">View Work</a>
-              <a class="btn ghost" href="https://ncgdrive.site" target="_blank" rel="noreferrer">Cloud Drive</a>
+              <a class="btn primary" data-i18n="hero.viewWork" href="#work">View Work</a>
+              <a class="btn ghost" data-i18n="hero.cloudDrive" href="https://ncgdrive.site/ol" target="_blank" rel="noreferrer">Cloud Drive</a>
             </div>
           </div>
         </section>
 
         <section class="section" id="about">
           <div class="section-head">
-            <p class="eyebrow">About</p>
-            <h2>Live in the neon moment</h2>
+            <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+            <h2 data-i18n="about.title">Live in the neon moment</h2>
           </div>
           <div class="two-col">
-            <p>
+            <p data-i18n="about.copy">
               I learn and grow every day, embracing new challenges and technologies to expand my skills and knowledge. My passion lies in creating seamless digital experiences that blend aesthetics with functionality. I thrive in collaborative environments where ideas flow freely, and innovation is encouraged.
               <br>
               When I'm not immersed in tech, you can find me in the skies, flying small aircraft and exploring the world from above. Filming my flights and sharing my experiences online.
             </p>
             <div class="tag-grid">
-              <span class="tag">Power efficiency</span>
-              <span class="tag">CPU architecture</span>
-              <span class="tag">Device Overclock</span>
-              <span class="tag">Plane flying</span>
-              <span class="tag">Prototyping</span>
-              <span class="tag">ADS-B tracker</span>
+              <span class="tag" data-i18n="about.tag.power">Power efficiency</span>
+              <span class="tag" data-i18n="about.tag.cpu">CPU architecture</span>
+              <span class="tag" data-i18n="about.tag.oc">Device Overclock</span>
+              <span class="tag" data-i18n="about.tag.fly">Plane flying</span>
+              <span class="tag" data-i18n="about.tag.proto">Prototyping</span>
+              <span class="tag" data-i18n="about.tag.adsb">ADS-B tracker</span>
             </div>
           </div>
         </section>
 
         <section class="section" id="work">
           <div class="section-head">
-            <p class="eyebrow">Featured work</p>
-            <h2>Recent highlights</h2>
+            <p class="eyebrow" data-i18n="work.eyebrow">Featured work</p>
+            <h2 data-i18n="work.title">Recent highlights</h2>
           </div>
           <div class="cards">
             <article class="card">
               <div class="card-top">
-                <p class="card-kicker">2025 · Utility</p>
-                <h3>ADS-B Tracker</h3>
-                <p class="card-copy">Building a ADS-B tracker with Raspberry Pi and SDR antenna. Receiving live flight data on 1090Mhz and visualizing it in real-time with tar 1090. Supplying data to various flight tracking services.</p>
+                <p class="card-kicker" data-i18n="work.card1.kicker">2025 · Utility</p>
+                <h3 data-i18n="work.card1.title">ADS-B Tracker</h3>
+                <p class="card-copy" data-i18n="work.card1.copy">Building a ADS-B tracker with Raspberry Pi and SDR antenna. Receiving live flight data on 1090Mhz and visualizing it in real-time with tar 1090. Supplying data to various flight tracking services.</p>
               </div>
             </article>
             <article class="card">
               <div class="card-top">
-                <p class="card-kicker">2024-2025 · Operating System</p>
-                <h3>Linux hand on experience</h3>
-                <p class="card-copy">Installed Asahi Linux Fedora Remix on my Apple M2 Macbook Pro 13. Customising it with lrcsnc, Hyprland, quickshell and many more. Discrovered the open source community with countless amount of APPs to choose from </p>
+                <p class="card-kicker" data-i18n="work.card2.kicker">2024-2025 · Operating System</p>
+                <h3 data-i18n="work.card2.title">Linux hand on experience</h3>
+                <p class="card-copy" data-i18n="work.card2.copy">Installed Asahi Linux Fedora Remix on my Apple M2 Macbook Pro 13. Customising it with lrcsnc, Hyprland, quickshell and many more. Discrovered the open source community with countless amount of APPs to choose from </p>
               </div>
             </article>
             <article class="card">
               <div class="card-top">
-                <p class="card-kicker">2024 · DIY Experience</p>
-                <h3>Custom PC Building</h3>
-                <p class="card-copy">First time building a custom PC, focusing on performance over power efficiency. Choosing Ryzen 5 5600 and AMD Radeon RX 6950 XT. Achieveing 200 Watt idle power with maximum 600 Watt peak power consumption.</p>
+                <p class="card-kicker" data-i18n="work.card3.kicker">2024 · DIY Experience</p>
+                <h3 data-i18n="work.card3.title">Custom PC Building</h3>
+                <p class="card-copy" data-i18n="work.card3.copy">First time building a custom PC, focusing on performance over power efficiency. Choosing Ryzen 5 5600 and AMD Radeon RX 6950 XT. Achieveing 200 Watt idle power with maximum 600 Watt peak power consumption.</p>
               </div>
             </article>
           </div>
@@ -103,11 +111,11 @@
 
         <section class="section" id="hobby">
           <div class="section-head">
-            <p class="eyebrow">Hobby</p>
-            <h2>Flying planes</h2>
+            <p class="eyebrow" data-i18n="hobby.eyebrow">Hobby</p>
+            <h2 data-i18n="hobby.title">Flying planes</h2>
           </div>
           <div class="two-col">
-            <p>
+            <p data-i18n="hobby.copy">
               I love being in the cockpit—whether that is a weekend hop in a Cessna 152 or sim time at home.
               I enjoy the freedom of VFR flying, navigating by visual references and basic instruments.
               My sim setup helps me practice procedures and improve my skills when I can't get to the airport.
@@ -115,27 +123,27 @@
 
             </p>
             <div class="tag-grid">
-              <span class="tag">VFR practice</span>
-              <span class="tag">Sim flying</span>
-              <span class="tag">Aircraft systems</span>
-              <span class="tag">Navigation</span>
+              <span class="tag" data-i18n="hobby.tag.vfr">VFR practice</span>
+              <span class="tag" data-i18n="hobby.tag.sim">Sim flying</span>
+              <span class="tag" data-i18n="hobby.tag.systems">Aircraft systems</span>
+              <span class="tag" data-i18n="hobby.tag.nav">Navigation</span>
             </div>
           </div>
         </section>
 
         <section class="section" id="shots">
           <div class="section-head">
-            <p class="eyebrow">Shots</p>
-            <h2>Visuals & captures</h2>
-            <p class="lede">Screenshots taken in flight simulator, shown randomly from a curated collection.</p>
+            <p class="eyebrow" data-i18n="shots.eyebrow">Shots</p>
+            <h2 data-i18n="shots.title">Visuals & captures</h2>
+            <p class="lede" data-i18n="shots.lede">Screenshots taken in flight simulator, shown randomly from a curated collection.</p>
           </div>
           <div class="shots-grid" id="shots-grid" aria-live="polite"></div>
         </section>
 
         <section class="section" id="specs">
           <div class="section-head">
-            <p class="eyebrow">Rig</p>
-            <h2>Computer specs</h2>
+            <p class="eyebrow" data-i18n="specs.eyebrow">Rig</p>
+            <h2 data-i18n="specs.title">Computer specs</h2>
           </div>
           <div class="specs-grid">
             <a class="spec-card" href="https://www.techpowerup.com/cpu-specs/ryzen-5-5600.c2743" target="_blank" rel="noreferrer">
@@ -152,44 +160,36 @@
               <p>Asgard 32GB DDR4 3800Mhz OC</p>
             </a>
             <a class="spec-card" href="https://europe.kioxia.com/en-europe/personal/ssd/exceria-plus-g3-nvme-ssd.html" target="_blank" rel="noreferrer">
-              <h3>Storage</h3>
+              <h3 data-i18n="specs.storage">Storage</h3>
               <p>Kioxia G3 Plus 1TB </p>
               <p>Greatwall GW7000 2TB </p>
             </a>
             <a class="spec-card" href="https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse?srsltid=AfmBOoqBGGs7ljeJFCBggqVXu22upC5ps0Z4aCq9BeQNTIl5D4IVHFSI" target="_blank" rel="noreferrer">
-              <h3>Peripherals</h3>
+              <h3 data-i18n="specs.peripherals">Peripherals</h3>
               <p>AULA F87 Pro</p>
               <p>Dragonfly F1 Pro 4000Hz</p>
             </a>
             <a class="spec-card" href="https://www.amazon.co.uk/AOC-Gaming-CQ27G2S-BK-FreeSync/dp/B0C4P5R8HQ?th=1" target="_blank" rel="noreferrer">
-              <h3>Monitor</h3>
+              <h3 data-i18n="specs.monitor">Monitor</h3>
               <p>16" 2560x1600 240Hz</p>
               <p>27" 2560x1440 165Hz</p>
             </a>
             <a class="spec-card" href="https://rog.asus.com/motherboards/rog-strix/rog-strix-x570-i-gaming-model/" target="_blank" rel="noreferrer">
-              <h3>Motherboard</h3>
+              <h3 data-i18n="specs.motherboard">Motherboard</h3>
               <p>ROG Strix X570-I Gaming</p>
             </a>
             <div class="spec-card">
-              <h3>PSU</h3>
+              <h3 data-i18n="specs.psu">PSU</h3>
               <p>YESTARRY 650W SFX </p>
               <p>80+ Gold</p>
             </div>
           </div>
         </section>
 
-        <section class="section" id="games">
-          <div class="section-head">
-            <p class="eyebrow">Recent games</p>
-            <h2>What I have been playing</h2>
-          </div>
-          <div class="games-grid" id="games-list"></div>
-        </section>
-
         <section class="section" id="social">
           <div class="section-head">
-            <p class="eyebrow">Social</p>
-            <h2>Find me online</h2>
+            <p class="eyebrow" data-i18n="social.eyebrow">Social</p>
+            <h2 data-i18n="social.title">Find me online</h2>
           </div>
           <div class="social-grid">
             <a class="social-card" href="https://steamcommunity.com/id/xNeonCatGirlx/" target="_blank" rel="noreferrer">
@@ -213,24 +213,169 @@
       </main>
 
       <footer class="footer">
-        <span>Built with neon energy.</span>
-        <span>© 2025 David Yang. All rights reserved.</span>
-        <span>Based on synthwave vibes.</span>
+        <span data-i18n="footer.line1">Built with neon energy.</span>
+        <span data-i18n="footer.line2">© 2025 David Yang. All rights reserved.</span>
+        <span data-i18n="footer.line3">Based on synthwave vibes.</span>
       </footer>
     </div>
   </div>
 
   <aside class="side-nav">
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#hobby">Hobby</a>
-    <a href="#shots">Shots</a>
-    <a href="#specs">Rig</a>
-    <a href="#games">Games</a>
-    <a href="#social">Social</a>
+    <a data-i18n="nav.about" href="#about">About</a>
+    <a data-i18n="nav.work" href="#work">Work</a>
+    <a data-i18n="nav.hobby" href="#hobby">Hobby</a>
+    <a data-i18n="nav.shots" href="#shots">Shots</a>
+    <a data-i18n="nav.specs" href="#specs">Rig</a>
+    <a data-i18n="nav.social" href="#social">Social</a>
   </aside>
 
   <script>
+    const translations = {
+      en: {
+        'nav.about': 'About',
+        'nav.work': 'Featured work',
+        'nav.hobby': 'Hobby',
+        'nav.shots': 'Shots',
+        'nav.specs': 'Rig',
+        'nav.social': 'Social',
+        'hero.eyebrow': 'Welcome to home page of',
+        'hero.alias': 'aka NeonCatGirl',
+        'hero.subhead': 'Student / Linux User / Pilot / Tech Enthusiast',
+        'hero.lede': 'I am a passionate student and tech enthusiast who loves exploring the latest in technology, flying planes, and sharing my journey online. Especially fond of overclocking and building custom PCs. Recently setting up a open source cloud drive for personal use.',
+        'hero.viewWork': 'View Work',
+        'hero.cloudDrive': 'Cloud Drive',
+        'about.eyebrow': 'About',
+        'about.title': 'Live in the neon moment',
+        'about.copy': 'I learn and grow every day, embracing new challenges and technologies to expand my skills and knowledge. My passion lies in creating seamless digital experiences that blend aesthetics with functionality. I thrive in collaborative environments where ideas flow freely, and innovation is encouraged.<br>When I\'m not immersed in tech, you can find me in the skies, flying small aircraft and exploring the world from above. Filming my flights and sharing my experiences online.',
+        'about.tag.power': 'Power efficiency',
+        'about.tag.cpu': 'CPU architecture',
+        'about.tag.oc': 'Device Overclock',
+        'about.tag.fly': 'Plane flying',
+        'about.tag.proto': 'Prototyping',
+        'about.tag.adsb': 'ADS-B tracker',
+        'work.eyebrow': 'Featured work',
+        'work.title': 'Recent highlights',
+        'work.card1.kicker': '2025 · Utility',
+        'work.card1.title': 'ADS-B Tracker',
+        'work.card1.copy': 'Building a ADS-B tracker with Raspberry Pi and SDR antenna. Receiving live flight data on 1090Mhz and visualizing it in real-time with tar 1090. Supplying data to various flight tracking services.',
+        'work.card2.kicker': '2024-2025 · Operating System',
+        'work.card2.title': 'Linux hand on experience',
+        'work.card2.copy': 'Installed Asahi Linux Fedora Remix on my Apple M2 Macbook Pro 13. Customising it with lrcsnc, Hyprland, quickshell and many more. Discrovered the open source community with countless amount of APPs to choose from',
+        'work.card3.kicker': '2024 · DIY Experience',
+        'work.card3.title': 'Custom PC Building',
+        'work.card3.copy': 'First time building a custom PC, focusing on performance over power efficiency. Choosing Ryzen 5 5600 and AMD Radeon RX 6950 XT. Achieveing 200 Watt idle power with maximum 600 Watt peak power consumption.',
+        'hobby.eyebrow': 'Hobby',
+        'hobby.title': 'Flying planes',
+        'hobby.copy': 'I love being in the cockpit—whether that is a weekend hop in a Cessna 152 or sim time at home. I enjoy the freedom of VFR flying, navigating by visual references and basic instruments. My sim setup helps me practice procedures and improve my skills when I can\'t get to the airport. I love the graphics of Microsoft Flight Simulator, and the Physics of X-Plane 11. With the astonishingly detailed aircraft systems modeled in add-ons like the inibuilds A350, PMDG 777, and Toliss A320 / A340.',
+        'hobby.tag.vfr': 'VFR practice',
+        'hobby.tag.sim': 'Sim flying',
+        'hobby.tag.systems': 'Aircraft systems',
+        'hobby.tag.nav': 'Navigation',
+        'shots.eyebrow': 'Shots',
+        'shots.title': 'Visuals & captures',
+        'shots.lede': 'Screenshots taken in flight simulator, shown randomly from a curated collection.',
+        'specs.eyebrow': 'Rig',
+        'specs.title': 'Computer specs',
+        'specs.storage': 'Storage',
+        'specs.peripherals': 'Peripherals',
+        'specs.monitor': 'Monitor',
+        'specs.motherboard': 'Motherboard',
+        'specs.psu': 'PSU',
+        'social.eyebrow': 'Social',
+        'social.title': 'Find me online',
+        'footer.line1': 'Built with neon energy.',
+        'footer.line2': '© 2025 David Yang. All rights reserved.',
+        'footer.line3': 'Based on synthwave vibes.',
+      },
+      zh: {
+        'nav.about': '关于我',
+        'nav.work': '精选作品',
+        'nav.hobby': '爱好',
+        'nav.shots': '截图',
+        'nav.specs': '设备',
+        'nav.social': '社交',
+        'hero.eyebrow': '欢迎来到主页',
+        'hero.alias': '又名 NeonCatGirl',
+        'hero.subhead': '学生 / Linux 用户 / 飞行爱好者 / 科技控',
+        'hero.lede': '我是一个热爱科技的学生，喜欢探索前沿技术、开飞机，并把经历分享给大家。尤其痴迷超频和折腾自组电脑，最近还搭建了一个开源的私有云盘。',
+        'hero.viewWork': '查看作品',
+        'hero.cloudDrive': '云盘入口',
+        'about.eyebrow': '关于',
+        'about.title': '活在霓虹此刻',
+        'about.copy': '我每天都在学习和成长，拥抱新挑战、新技术，让审美与功能并行。喜欢在团队中碰撞创意、激发创新。<br>不搞技术时，我就在天空中，开着飞机、拍摄飞行视频，也会在网上分享这些体验。',
+        'about.tag.power': '能效优化',
+        'about.tag.cpu': 'CPU 架构',
+        'about.tag.oc': '设备超频',
+        'about.tag.fly': '飞行体验',
+        'about.tag.proto': '快速原型',
+        'about.tag.adsb': 'ADS-B 追踪',
+        'work.eyebrow': '精选作品',
+        'work.title': '近期亮点',
+        'work.card1.kicker': '2025 · 工具',
+        'work.card1.title': 'ADS-B 追踪器',
+        'work.card1.copy': '用树莓派和 SDR 天线搭建 ADS-B 追踪器，接收 1090Mhz 实时航班数据并用 tar1090 可视化，同时向多家航班服务提供数据。',
+        'work.card2.kicker': '2024-2025 · 操作系统',
+        'work.card2.title': 'Linux 实战体验',
+        'work.card2.copy': '在 Apple M2 MacBook Pro 13 安装 Asahi Linux Fedora Remix，搭配 lrcsnc、Hyprland、quickshell 等定制桌面，感受海量开源应用与社区文化。',
+        'work.card3.kicker': '2024 · DIY 体验',
+        'work.card3.title': '自装 PC',
+        'work.card3.copy': '第一次装机主打性能，选用 Ryzen 5 5600 + Radeon RX 6950 XT。待机功耗 200W，峰值约 600W。',
+        'hobby.eyebrow': '爱好',
+        'hobby.title': '飞行与模拟',
+        'hobby.copy': '我喜欢坐进驾驶舱，无论是周末驾驶塞斯纳152飞机，还是在家练模拟飞行。享受目视飞行的自由，也用模拟器练习流程、提高技巧。偏爱 MSFS 的画面、X-Plane 11 的物理，以及 inibuilds A350、PMDG 777、Toliss A320/A340 等深度机模。',
+        'hobby.tag.vfr': '目视飞行',
+        'hobby.tag.sim': '模拟飞行',
+        'hobby.tag.systems': '系统学习',
+        'hobby.tag.nav': '导航技能',
+        'shots.eyebrow': '截图',
+        'shots.title': '视觉与瞬间',
+        'shots.lede': '来自模拟飞行的截图，从精选库中随机展示。',
+        'specs.eyebrow': '设备',
+        'specs.title': '电脑配置',
+        'specs.storage': '存储',
+        'specs.peripherals': '外设',
+        'specs.monitor': '显示器',
+        'specs.motherboard': '主板',
+        'specs.psu': '电源',
+        'social.eyebrow': '社交',
+        'social.title': '找到我',
+        'footer.line1': '以霓虹能量打造。',
+        'footer.line2': '© 2025 David Yang. 保留所有权利。',
+        'footer.line3': '致敬合成波氛围。',
+      },
+    };
+
+    const langToggles = Array.from(document.querySelectorAll('.lang-toggle'));
+
+    function applyTranslations(lang) {
+      const map = translations[lang] || translations.en;
+      document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+      document.querySelectorAll('[data-i18n]').forEach((node) => {
+        const key = node.dataset.i18n;
+        const value = map[key] || translations.en[key];
+        if (!value) return;
+        node.innerHTML = value;
+      });
+
+      const isZh = lang === 'zh';
+      langToggles.forEach((btn) => {
+        btn.textContent = isZh ? 'EN' : '中文';
+        btn.setAttribute('aria-pressed', String(isZh));
+        btn.setAttribute('aria-label', isZh ? 'Switch to English' : '切换到中文');
+      });
+    }
+
+    let currentLang = localStorage.getItem('langPref') === 'zh' ? 'zh' : 'en';
+    applyTranslations(currentLang);
+
+    langToggles.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        localStorage.setItem('langPref', currentLang);
+        applyTranslations(currentLang);
+      });
+    });
+
     // Smooth scroll for in-page anchors.
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((link) => {
@@ -497,96 +642,7 @@
     }
 
     loadShots();
-
-    // Steam recent games pull via Cloudflare function proxy.
-    const steamConfig = {
-      steamId: '76561199085961124',
-      max: 4,
-    };
-
-    const gamesList = document.getElementById('games-list');
-
-    const sampleGames = [
-      { appid: 730, name: 'Counter-Strike 2', playtime_2weeks: 933, img_icon_url: '8dbc71957312bbd3baea65848b545be9eae2a355' },
-      { appid: 284160, name: 'BeamNG.drive', playtime_2weeks: 672, img_icon_url: '34f8997c32b2f463caf2014aab4a95109a896ecc' },
-      { appid: 666610, name: 'Endless ATC', playtime_2weeks: 100, img_icon_url: '54ac79bb077680e807ccd9643f16a241b265e411' },
-      { appid: 1473350, name: '(the) Gnorp Apologue', playtime_2weeks: 27, img_icon_url: 'c0ce2ae2660a7d0590b777e2cdbc6395d78e99c3' },
-    ];
-
-    function formatHours(minutes) {
-      if (!minutes) return '0 hrs';
-      return `${Math.round(minutes / 60)} hrs last 2 wks`;
-    }
-
-    function headerImage(appid) {
-      return `https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/header.jpg`;
-    }
-
-    function iconImage(appid, icon) {
-      if (!icon) return headerImage(appid);
-      return `https://media.steampowered.com/steamcommunity/public/images/apps/${appid}/${icon}.jpg`;
-    }
-
-    function createGameCard(game) {
-      const card = document.createElement('article');
-      card.className = 'game-card';
-
-      const thumb = document.createElement('div');
-      thumb.className = 'game-thumb';
-      const headerUrl = headerImage(game.appid);
-      const iconUrl = iconImage(game.appid, game.img_icon_url);
-      // Try header first, then icon as fallback layer.
-      thumb.style.setProperty('--bg-image', `linear-gradient(135deg, rgba(11,16,35,0.6), rgba(11,16,35,0.3)), url(${headerUrl}), url(${iconUrl})`);
-
-      const content = document.createElement('div');
-      content.className = 'game-body';
-
-      const title = document.createElement('h3');
-      title.textContent = game.name;
-
-      const meta = document.createElement('p');
-      meta.className = 'game-meta';
-      meta.textContent = formatHours(game.playtime_2weeks);
-
-      content.appendChild(title);
-      content.appendChild(meta);
-      card.appendChild(thumb);
-      card.appendChild(content);
-      return card;
-    }
-
-    function renderGames(games) {
-      gamesList.innerHTML = '';
-      games.forEach((game) => gamesList.appendChild(createGameCard(game)));
-    }
-
-    async function loadSteamGames() {
-      if (!gamesList) return;
-
-      if (!steamConfig.steamId) {
-        renderGames(sampleGames);
-        return;
-      }
-
-      try {
-        const response = await fetch(`/recently-played?steamid=${encodeURIComponent(steamConfig.steamId)}`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        const games = data?.response?.games || [];
-
-        if (!games.length) {
-          renderGames(sampleGames);
-          return;
-        }
-
-        renderGames(games.slice(0, steamConfig.max));
-      } catch (error) {
-        renderGames(sampleGames);
-        console.error('Steam fetch failed', error);
-      }
-    }
-
-    loadSteamGames();
   </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2132cd15dfdb4ea19b873654dd18a92d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
