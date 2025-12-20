@@ -139,7 +139,6 @@
           </div>
           <div class="shots-grid" id="shots-grid" aria-live="polite"></div>
         </section>
-
         <section class="section" id="specs">
           <div class="section-head">
             <p class="eyebrow" data-i18n="specs.eyebrow">Rig</p>
@@ -344,7 +343,6 @@
         'footer.line3': '致敬合成波氛围。',
       },
     };
-
     const langToggles = Array.from(document.querySelectorAll('.lang-toggle'));
 
     function applyTranslations(lang) {
@@ -440,7 +438,7 @@
       sections.forEach((section) => sectionObserver.observe(section));
     }
 
-    // Randomize three screenshots from GitHub raw URLs; falls back to a placeholder if nothing is found.
+    // random three pic from github, access issue for chinese visitor
     const shotsGrid = document.getElementById('shots-grid');
     const shotsFallback = (label) => `data:image/svg+xml;utf8,${encodeURIComponent(
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">

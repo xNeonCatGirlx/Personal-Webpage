@@ -141,7 +141,7 @@ a:hover {
   color: var(--accent-2);
   background: rgba(255, 46, 243, 0.1);
 }
-
+// force lang toggle to always show on phone
 .mobile-lang-toggle {
   display: none;
   position: fixed;
