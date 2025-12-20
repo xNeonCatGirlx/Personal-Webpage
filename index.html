@@ -34,6 +34,8 @@
         </div>
       </header>
 
+      <button class="lang-toggle-mobile" type="button" aria-pressed="false" aria-label="Switch language">EN</button>
+
       <div class="sidebar-sentinel" aria-hidden="true"></div>
 
       <main>
@@ -404,7 +406,7 @@
       zh: '切换到中文',
       ja: '日本語に切り替え',
     };
-    const langToggles = Array.from(document.querySelectorAll('.lang-toggle'));
+    const langToggles = Array.from(document.querySelectorAll('.lang-toggle, .lang-toggle-mobile'));
 
     const nextLang = (lang) => {
       const currentIndex = languages.indexOf(lang);
