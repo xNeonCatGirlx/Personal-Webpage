@@ -10,7 +10,7 @@
   <meta property="og:url" content="https://ncgdrive.site/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/xNeonCatGirlx/xNeonCatGirlx.github.io/refs/heads/main/web.ico">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -30,11 +30,9 @@
             <a data-i18n="nav.specs" href="#specs">Rig</a>
             <a data-i18n="nav.social" href="#social">Social</a>
           </nav>
-          <button class="lang-toggle" type="button" aria-pressed="false" aria-label="Switch to Chinese">中文</button>
+          <button class="lang-toggle" type="button" aria-pressed="false" aria-label="Switch language">EN</button>
         </div>
       </header>
-
-      <button class="lang-toggle mobile-lang-toggle" type="button" aria-pressed="false" aria-label="Switch to Chinese">中文</button>
 
       <div class="sidebar-sentinel" aria-hidden="true"></div>
 
@@ -135,7 +133,7 @@
           <div class="section-head">
             <p class="eyebrow" data-i18n="shots.eyebrow">Shots</p>
             <h2 data-i18n="shots.title">Visuals & captures</h2>
-            <p class="lede" data-i18n="shots.lede">Screenshots taken in flight simulator, shown randomly from a curated collection.</p>
+            <p class="lede" data-i18n="shots.lede">Screenshots taken in flight simulator, shown randomly from a curated collection. Require network access to github in order to load images.</p>
           </div>
           <div class="shots-grid" id="shots-grid" aria-live="polite"></div>
         </section>
@@ -328,7 +326,7 @@
         'hobby.tag.nav': '导航技能',
         'shots.eyebrow': '截图',
         'shots.title': '视觉与瞬间',
-        'shots.lede': '来自模拟飞行的截图，从精选库中随机展示。',
+        'shots.lede': '来自模拟飞行的截图，从精选库中随机展示。需要可访问Github的网络环境以加载图片。',
         'specs.eyebrow': '设备',
         'specs.title': '电脑配置',
         'specs.storage': '存储',
@@ -342,12 +340,82 @@
         'footer.line2': '© 2025 David Yang. 保留所有权利。',
         'footer.line3': '致敬合成波氛围。',
       },
+      ja: {
+        'nav.about': '私について',
+        'nav.work': '注目プロジェクト',
+        'nav.hobby': '趣味',
+        'nav.shots': 'ショット',
+        'nav.specs': '構成',
+        'nav.social': 'SNS',
+        'hero.eyebrow': 'ようこそ、ここは',
+        'hero.alias': '別名 NeonCatGirl',
+        'hero.subhead': '学生 / Linux ユーザー / パイロット / テック好き',
+        'hero.lede': '最新テクノロジーを触り、飛行機を操縦し、その経験をシェアするのが好きな学生です。オーバークロックや自作 PC が大好物。最近はプライベートで使うオープンソースのクラウドドライブも構築しました。',
+        'hero.viewWork': 'プロジェクトを見る',
+        'hero.cloudDrive': 'クラウドドライブ',
+        'about.eyebrow': '概要',
+        'about.title': 'ネオンの瞬間を生きる',
+        'about.copy': '毎日学びながらスキルと知識を広げ、デザインと機能の両立を目指しています。自由にアイデアを出し合い、イノベーションを生む環境が大好きです。<br>テックから離れるときは、小型機で空を飛んだり、その映像を撮って共有しています。',
+        'about.tag.power': '省電力最適化',
+        'about.tag.cpu': 'CPU アーキテクチャ',
+        'about.tag.oc': 'デバイス OC',
+        'about.tag.fly': '飛行体験',
+        'about.tag.proto': 'プロトタイピング',
+        'about.tag.adsb': 'ADS-B トラッカー',
+        'work.eyebrow': '注目プロジェクト',
+        'work.title': '最近のハイライト',
+        'work.card1.kicker': '2025 · ユーティリティ',
+        'work.card1.title': 'ADS-B トラッカー',
+        'work.card1.copy': 'Raspberry Pi と SDR アンテナで ADS-B トラッカーを構築。1090Mhz のフライトデータを受信し、tar1090 で可視化。複数のフライトトラッカーにフィードを提供しています。',
+        'work.card2.kicker': '2024-2025 · OS',
+        'work.card2.title': 'Linux 実践経験',
+        'work.card2.copy': 'Apple M2 MacBook Pro 13 に Asahi Linux Fedora Remix を導入。lrcsnc、Hyprland、quickshell などで環境をカスタマイズし、膨大な OSS コミュニティを体感。',
+        'work.card3.kicker': '2024 · DIY',
+        'work.card3.title': '自作 PC',
+        'work.card3.copy': '初めての自作は性能重視で Ryzen 5 5600 と Radeon RX 6950 XT を選択。アイドル 200W、ピーク約 600W を記録。',
+        'hobby.eyebrow': '趣味',
+        'hobby.title': '飛行とシム',
+        'hobby.copy': 'コックピットに座るのが好きです—週末にセスナ152で飛ぶ日もあれば、家でシミュレーターを回す日も。目視飛行の自由を楽しみつつ、手順練習やスキル向上にシムを活用。MSFS の映像美、X-Plane 11 の物理、inibuilds A350・PMDG 777・Toliss A320/A340 などの精密機体が推し。',
+        'hobby.tag.vfr': '目視飛行',
+        'hobby.tag.sim': 'シム飛行',
+        'hobby.tag.systems': 'システム研究',
+        'hobby.tag.nav': 'ナビゲーション',
+        'shots.eyebrow': 'ショット',
+        'shots.title': 'ビジュアル & キャプチャ',
+        'shots.lede': 'フライトシムで撮ったスクリーンショットを、キュレーションしたコレクションからランダム表示。',
+        'specs.eyebrow': '構成',
+        'specs.title': 'PC スペック',
+        'specs.storage': 'ストレージ',
+        'specs.peripherals': '周辺機器',
+        'specs.monitor': 'モニター',
+        'specs.motherboard': 'マザーボード',
+        'specs.psu': '電源',
+        'social.eyebrow': 'SNS',
+        'social.title': 'オンラインで会いましょう',
+        'footer.line1': 'ネオンエナジーで作りました。',
+        'footer.line2': '© 2025 David Yang. 無断転載禁止。',
+        'footer.line3': 'シンセウェーブの空気感をベースに。',
+      },
+    };
+    const languages = ['en', 'zh', 'ja'];
+    const langLabels = { en: 'EN', zh: '中文', ja: '日本語' };
+    const langToggleAria = {
+      en: 'Switch to English',
+      zh: '切换到中文',
+      ja: '日本語に切り替え',
     };
     const langToggles = Array.from(document.querySelectorAll('.lang-toggle'));
 
+    const nextLang = (lang) => {
+      const currentIndex = languages.indexOf(lang);
+      const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % languages.length : 0;
+      return languages[nextIndex];
+    };
+
     function applyTranslations(lang) {
-      const map = translations[lang] || translations.en;
-      document.documentElement.lang = lang === 'zh' ? 'zh' : 'en';
+      const activeLang = translations[lang] ? lang : 'en';
+      const map = translations[activeLang] || translations.en;
+      document.documentElement.lang = activeLang;
       document.querySelectorAll('[data-i18n]').forEach((node) => {
         const key = node.dataset.i18n;
         const value = map[key] || translations.en[key];
@@ -355,20 +423,21 @@
         node.innerHTML = value;
       });
 
-      const isZh = lang === 'zh';
+      const next = nextLang(activeLang);
       langToggles.forEach((btn) => {
-        btn.textContent = isZh ? 'EN' : '中文';
-        btn.setAttribute('aria-pressed', String(isZh));
-        btn.setAttribute('aria-label', isZh ? 'Switch to English' : '切换到中文');
+        btn.textContent = langLabels[next] || 'EN';
+        btn.setAttribute('aria-pressed', String(activeLang !== 'en'));
+        btn.setAttribute('aria-label', langToggleAria[next] || 'Switch language');
       });
     }
 
-    let currentLang = localStorage.getItem('langPref') === 'zh' ? 'zh' : 'en';
+    let currentLang = localStorage.getItem('langPref') || 'en';
+    if (!languages.includes(currentLang)) currentLang = 'en';
     applyTranslations(currentLang);
 
     langToggles.forEach((btn) => {
       btn.addEventListener('click', () => {
-        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        currentLang = nextLang(currentLang);
         localStorage.setItem('langPref', currentLang);
         applyTranslations(currentLang);
       });
