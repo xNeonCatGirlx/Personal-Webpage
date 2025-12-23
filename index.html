@@ -132,7 +132,7 @@
           <div class="section-head">
             <p class="eyebrow" data-i18n="shots.eyebrow">Shots</p>
             <h2 data-i18n="shots.title">Visuals & captures</h2>
-            <p class="lede" data-i18n="shots.lede">Screenshots taken in flight simulator, shown randomly from a curated collection. Require network access to github in order to load images.</p>
+            <p class="lede" data-i18n="shots.lede">Screenshots taken in flight simulator, shown randomly from a curated collection.</p>
           </div>
           <div class="shots-grid" id="shots-grid" aria-live="polite"></div>
         </section>
@@ -325,7 +325,7 @@
         'hobby.tag.nav': '导航技能',
         'shots.eyebrow': '截图',
         'shots.title': '视觉与瞬间',
-        'shots.lede': '来自模拟飞行的截图，从精选库中随机展示。需要可访问Github的网络环境以加载图片。',
+        'shots.lede': '来自模拟飞行的截图，从精选库中随机展示。',
         'specs.eyebrow': '设备',
         'specs.title': '电脑配置',
         'specs.storage': '存储',
@@ -541,7 +541,7 @@
       sections.forEach((section) => sectionObserver.observe(section));
     }
 
-    // random three pic from github, access issue for chinese visitor
+    // random three pics from local folder
     const shotsGrid = document.getElementById('shots-grid');
     const shotsFallback = (label) => `data:image/svg+xml;utf8,${encodeURIComponent(
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
@@ -558,7 +558,7 @@
     )}`;
 
     const shotsConfig = {
-      baseUrl: 'https://raw.githubusercontent.com/xNeonCatGirlx/Dotfiles/main/Flight%20Sim%20Pic/',
+      baseUrl: './Flight%20Sim%20Pic/',
       pick: 3,
       files: [
         'FlightSimulator_2025_05_18_22_46_24_431.webp',
@@ -670,7 +670,7 @@
       })),
     };
 
-    const shotPath = (name) => `${shotsConfig.baseUrl}${encodeURIComponent(name)}?raw=true`;
+    const shotPath = (name) => `${shotsConfig.baseUrl}${encodeURIComponent(name)}`;
 
     const buildShotPool = () => (shotsConfig.files || []).map((name) => ({
       src: shotPath(name),
