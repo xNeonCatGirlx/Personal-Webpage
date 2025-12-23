@@ -8,7 +8,6 @@
   <meta property="og:title" content="David Yang Portfolio" />
   <meta property="og:description" content="A interest site about David Yang's daily life, tech projects, and adventures." />
   <meta property="og:url" content="https://ncgdrive.site/" />
-  <!-- Fonts are self-hosted; remote Google Fonts fetch removed. -->
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/xNeonCatGirlx/xNeonCatGirlx.github.io/refs/heads/main/web.ico">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -398,6 +397,40 @@
       },
     };
     const languages = ['en', 'zh', 'ja'];
+
+    const fontBase = './Fonts/';
+    const fontBundles = {
+      en: [
+        { family: 'Space Grotesk', weight: '400', file: 'SpaceGrotesk-Regular.ttf' },
+        { family: 'Space Grotesk', weight: '600', file: 'SpaceGrotesk-SemiBold.ttf' },
+        { family: 'Space Grotesk', weight: '700', file: 'SpaceGrotesk-Bold.ttf' },
+        { family: 'Monoton', weight: '400', file: 'Monoton-Regular.ttf' },
+      ],
+      zh: [],
+      ja: [],
+    };
+    const loadedFonts = new Set();
+
+    async function loadFontsForLang(lang) {
+      const bundle = fontBundles[lang]?.length ? fontBundles[lang] : fontBundles.en;
+      const tasks = bundle.map(async ({ family, weight, file }) => {
+        const key = `${family}-${weight}`;
+        if (loadedFonts.has(key)) return;
+        const fontFace = new FontFace(family, `url(${fontBase}${file})`, {
+          weight,
+          style: 'normal',
+          display: 'swap',
+        });
+        try {
+          const loaded = await fontFace.load();
+          document.fonts.add(loaded);
+          loadedFonts.add(key);
+        } catch (err) {
+          console.warn(`Font load failed for ${family} ${weight}`, err);
+        }
+      });
+      await Promise.all(tasks);
+    }
     const langLabels = { en: 'EN', zh: '中文', ja: '日本語' };
     const langToggleAria = {
       en: 'Switch to English',
@@ -416,6 +449,7 @@
       const activeLang = translations[lang] ? lang : 'en';
       const map = translations[activeLang] || translations.en;
       document.documentElement.lang = activeLang;
+      loadFontsForLang(activeLang);
       document.querySelectorAll('[data-i18n]').forEach((node) => {
         const key = node.dataset.i18n;
         const value = map[key] || translations.en[key];
