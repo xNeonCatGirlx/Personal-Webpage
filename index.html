@@ -557,7 +557,7 @@
     )}`;
 
     const shotsConfig = {
-      baseUrl: 'https://raw.githubusercontent.com/xNeonCatGirlx/Dotfiles/main/Flight%20Sim%20Pic/',
+      baseUrl: 'Flight%20Sim%20Pic/',
       pick: 3,
       files: [
         'FlightSimulator_2025_05_18_22_46_24_431.webp',
@@ -669,7 +669,7 @@
       })),
     };
 
-    const shotPath = (name) => `${shotsConfig.baseUrl}${encodeURIComponent(name)}?raw=true`;
+    const shotPath = (name) => `${shotsConfig.baseUrl}${encodeURIComponent(name)}`;
 
     const buildShotPool = () => (shotsConfig.files || []).map((name) => ({
       src: shotPath(name),
