@@ -12,42 +12,43 @@
   
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/xNeonCatGirlx/xNeonCatGirlx.github.io/refs/heads/main/web.ico">
   <link rel="stylesheet" href="styles/main.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://esm.sh/three@0.183.2"
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="bg-frame">
-    <div class="starfield"></div>
-    <div class="horizon-grid"></div>
+    <div id="gridscan-bg" class="gridscan-bg" aria-hidden="true"></div>
     <div class="glass-panel">
-      <header class="topbar">
-        <div class="logo-mark" aria-hidden="true">//</div>
-        <div class="top-controls">
-          <nav class="nav">
-            <a data-i18n="nav.about" href="#about">About</a>
-            <a data-i18n="nav.work" href="#work">Featured work</a>
-            <a data-i18n="nav.hobby" href="#hobby">Hobby</a>
-            <a data-i18n="nav.shots" href="#shots">Shots</a>
-            <a data-i18n="nav.specs" href="#specs">Rig</a>
-            <a data-i18n="nav.social" href="#social">Social</a>
-          </nav>
-          <div class="top-links">
-            <a class="top-link" href="https://blog.ncgdrive.site/" target="_blank" rel="noreferrer">
-              <span>Blog</span>
-              <img class="external-icon" src="Resources/external-link-svgrepo-com.svg" alt="" aria-hidden="true">
-            </a>
-            <a id="stats-link" class="top-link" href="https://cloud.umami.is/analytics/eu/share/jW599XONXe8lo5DN?date=range%3A1766707200000%3A1766707200000%3Aall" target="_blank" rel="noreferrer">
-              <span>Stats</span>
-              <img class="external-icon" src="Resources/external-link-svgrepo-com.svg" alt="" aria-hidden="true">
-            </a>
-            <a class="top-link" href="https://ol.ncgdrive.site/" target="_blank" rel="noreferrer">
-              <span>Cloud Drive</span>
-              <img class="external-icon" src="Resources/external-link-svgrepo-com.svg" alt="" aria-hidden="true">
-            </a>
+      <header class="topbar topbar-target-cursor" data-target-cursor-root>
+        <div class="topbar-shell">
+          <a class="topbar-action cursor-target" href="https://blog.ncgdrive.site/" target="_blank" rel="noreferrer">Blog</a>
+          <a id="stats-link" class="topbar-action cursor-target" href="https://cloud.umami.is/analytics/eu/share/jW599XONXe8lo5DN?date=range%3A1766707200000%3A1766707200000%3Aall" target="_blank" rel="noreferrer">Stats</a>
+          <a class="topbar-action cursor-target" href="https://ol.ncgdrive.site/" target="_blank" rel="noreferrer">Cloud Drive</a>
+          <div class="lang-menu">
+            <button class="lang-toggle cursor-target" type="button" aria-expanded="false" aria-haspopup="menu" aria-label="Choose language">
+              <span class="lang-toggle__label">English</span>
+              <span class="lang-toggle__chevron" aria-hidden="true"></span>
+            </button>
+            <div class="lang-menu-panel" role="menu" aria-label="Language options">
+              <button class="lang-option cursor-target" type="button" data-lang="en" role="menuitemradio" aria-checked="true">English</button>
+              <button class="lang-option cursor-target" type="button" data-lang="zh" role="menuitemradio" aria-checked="false">中文</button>
+              <button class="lang-option cursor-target" type="button" data-lang="ja" role="menuitemradio" aria-checked="false">日本語</button>
+            </div>
           </div>
-          <button class="lang-toggle" type="button" aria-pressed="false" aria-label="Switch language">EN</button>
+        </div>
+        <div class="target-cursor" aria-hidden="true">
+          <span class="target-cursor__corner top-left"></span>
+          <span class="target-cursor__corner top-right"></span>
+          <span class="target-cursor__corner bottom-left"></span>
+          <span class="target-cursor__corner bottom-right"></span>
+          <span class="target-cursor__center"></span>
         </div>
       </header>
-
-      <button class="lang-toggle-mobile" type="button" aria-pressed="false" aria-label="Switch language">EN</button>
 
       <div class="sidebar-sentinel" aria-hidden="true"></div>
 
@@ -57,10 +58,10 @@
             <p class="eyebrow" data-i18n="hero.eyebrow">Welcome to home page of</p>
             <h1>
               <span class="glow">David Yang</span>
-              <span class="alias" data-i18n="hero.alias">aka NeonCatGirl</span>
-              <span class="subhead" data-i18n="hero.subhead">Student / Linux User / Pilot / Tech Enthusiast</span>
+              <span class="alias" data-i18n="hero.alias" data-decrypt data-decrypt-speed="126" data-decrypt-sequential="true" data-decrypt-direction="start">aka NeonCatGirl</span>
+              <span class="subhead" data-i18n="hero.subhead" data-decrypt data-decrypt-speed="54" data-decrypt-sequential="true" data-decrypt-direction="start">Student / Linux User / Pilot / Tech Enthusiast</span>
             </h1>
-            <p class="lede" data-i18n="hero.lede">
+            <p class="lede" data-i18n="hero.lede" data-decrypt data-decrypt-speed="72" data-decrypt-iterations="18" data-decrypt-direction="start">
               I am a passionate student and tech enthusiast who loves exploring the latest in technology, flying planes, and sharing my journey online. Especially fond of overclocking and building custom PCs. Recently set up a open source cloud drive for personal use. Working on a personal blog page.
             </p>
             <div class="actions">
@@ -242,6 +243,9 @@
     <a data-i18n="nav.social" href="#social">Social</a>
   </aside>
 
+  <script type="module" src="scripts/grid-scan.js"></script>
+  <script src="scripts/target-cursor.js"></script>
+  <script src="scripts/decrypted-text.js"></script>
   <script>
     const translations = {
       en: {
@@ -417,13 +421,11 @@
       },
     };
     const languages = ['en', 'zh', 'ja'];
-    const langLabels = { en: 'EN', zh: '中文', ja: '日本語' };
-    const langToggleAria = {
-      en: 'Switch to English',
-      zh: '切换到中文',
-      ja: '日本語に切り替え',
-    };
-    const langToggles = Array.from(document.querySelectorAll('.lang-toggle, .lang-toggle-mobile'));
+    const langLabels = { en: 'English', zh: '中文', ja: '日本語' };
+    const langToggle = document.querySelector('.lang-toggle');
+    const langToggleLabel = langToggle ? langToggle.querySelector('.lang-toggle__label') : null;
+    const langMenu = document.querySelector('.lang-menu');
+    const langOptions = Array.from(document.querySelectorAll('.lang-option'));
 
     // Keep the Umami share link's end time aligned to the moment it is clicked.
     const statsLink = document.getElementById('stats-link');
@@ -439,10 +441,10 @@
       statsLink.addEventListener('click', setStatsHref);
     }
 
-    const nextLang = (lang) => {
-      const currentIndex = languages.indexOf(lang);
-      const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % languages.length : 0;
-      return languages[nextIndex];
+    const setLangMenuOpen = (open) => {
+      if (!langMenu || !langToggle) return;
+      langMenu.classList.toggle('is-open', open);
+      langToggle.setAttribute('aria-expanded', String(open));
     };
 
     function applyTranslations(lang) {
@@ -456,23 +458,55 @@
         node.innerHTML = value;
       });
 
-      const next = nextLang(activeLang);
-      langToggles.forEach((btn) => {
-        btn.textContent = langLabels[next] || 'EN';
-        btn.setAttribute('aria-pressed', String(activeLang !== 'en'));
-        btn.setAttribute('aria-label', langToggleAria[next] || 'Switch language');
+      if (langToggleLabel) {
+        langToggleLabel.textContent = langLabels[activeLang] || 'English';
+      }
+
+      if (langToggle) {
+        langToggle.setAttribute('aria-label', `Choose language, current ${langLabels[activeLang] || 'English'}`);
+      }
+
+      langOptions.forEach((option) => {
+        const isActive = option.dataset.lang === activeLang;
+        option.classList.toggle('is-active', isActive);
+        option.setAttribute('aria-checked', String(isActive));
       });
+
+      if (typeof window.refreshDecryptedText === 'function') {
+        window.refreshDecryptedText();
+      }
     }
 
     let currentLang = localStorage.getItem('langPref') || 'en';
     if (!languages.includes(currentLang)) currentLang = 'en';
     applyTranslations(currentLang);
 
-    langToggles.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        currentLang = nextLang(currentLang);
+    if (langToggle && langMenu) {
+      langToggle.addEventListener('click', () => {
+        setLangMenuOpen(!langMenu.classList.contains('is-open'));
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!langMenu.contains(event.target)) {
+          setLangMenuOpen(false);
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setLangMenuOpen(false);
+        }
+      });
+    }
+
+    langOptions.forEach((option) => {
+      option.addEventListener('click', () => {
+        const selectedLang = option.dataset.lang;
+        if (!selectedLang || !languages.includes(selectedLang)) return;
+        currentLang = selectedLang;
         localStorage.setItem('langPref', currentLang);
         applyTranslations(currentLang);
+        setLangMenuOpen(false);
       });
     });
 
@@ -489,20 +523,23 @@
       });
     });
 
-    // Parallax tilt for the horizon grid based on scroll.
-    const horizon = document.querySelector('.horizon-grid');
-    const baseTransform = 'perspective(820px) rotateX(66deg) translateY(120px) scale(2.0)';
-    const maxTilt = 6; // degrees
-    function setTilt() {
-      if (!horizon) return;
-      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-      const ratio = scrollable > 0 ? window.scrollY / scrollable : 0;
-      const tilt = (ratio - 0.5) * 2 * maxTilt; // center around 0
-      horizon.style.transform = `${baseTransform} rotateZ(${tilt.toFixed(2)}deg)`;
-    }
-    window.addEventListener('scroll', () => requestAnimationFrame(setTilt), { passive: true });
-    window.addEventListener('resize', () => requestAnimationFrame(setTilt));
-    setTilt();
+    // Simple frame scheduler to batch a read before a write in the same rAF tick.
+    let frameQueued = false;
+    const frameReads = [];
+    const frameWrites = [];
+    const enqueueFrame = (readFn, writeFn) => {
+      frameReads.push(readFn);
+      frameWrites.push(writeFn);
+      if (frameQueued) return;
+      frameQueued = true;
+      requestAnimationFrame(() => {
+        frameQueued = false;
+        const readResults = frameReads.map((fn) => fn());
+        frameReads.length = 0;
+        frameWrites.forEach((fn, i) => fn(readResults[i]));
+        frameWrites.length = 0;
+      });
+    };
 
     // Reveal sidebar when the sentinel scrolls out of view (i.e., past the hero).
     const sentinel = document.querySelector('.sidebar-sentinel');
