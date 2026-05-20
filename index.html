@@ -21,10 +21,10 @@
   </script>
 </head>
 <body>
-  <div class="bg-frame">
+  <div class="bg-frame" data-target-cursor-root>
     <div id="gridscan-bg" class="gridscan-bg" aria-hidden="true"></div>
     <div class="glass-panel">
-      <header class="topbar topbar-target-cursor" data-target-cursor-root>
+      <header class="topbar topbar-target-cursor">
         <div class="topbar-shell">
           <a class="topbar-action cursor-target" href="https://blog.ncgdrive.site/" target="_blank" rel="noreferrer">Blog</a>
           <a id="stats-link" class="topbar-action cursor-target" href="https://cloud.umami.is/analytics/eu/share/jW599XONXe8lo5DN?date=range%3A1766707200000%3A1766707200000%3Aall" target="_blank" rel="noreferrer">Stats</a>
@@ -40,13 +40,6 @@
               <button class="lang-option cursor-target" type="button" data-lang="ja" role="menuitemradio" aria-checked="false">日本語</button>
             </div>
           </div>
-        </div>
-        <div class="target-cursor" aria-hidden="true">
-          <span class="target-cursor__corner top-left"></span>
-          <span class="target-cursor__corner top-right"></span>
-          <span class="target-cursor__corner bottom-left"></span>
-          <span class="target-cursor__corner bottom-right"></span>
-          <span class="target-cursor__center"></span>
         </div>
       </header>
 
@@ -118,7 +111,7 @@
             <h2 data-i18n="work.title">Recent highlights</h2>
           </div>
           <div class="cards cards-spotlight">
-            <article class="card spotlight-card" data-spotlight-card style="--spotlight-color: rgba(46, 243, 255, 0.24);">
+            <article class="card spotlight-card cursor-target" data-spotlight-card style="--spotlight-color: rgba(46, 243, 255, 0.24);">
               <div class="spotlight-card__surface" aria-hidden="true"></div>
               <div class="card-top spotlight-card__content">
                 <p class="card-kicker" data-i18n="work.card1.kicker">2025 · Utility</p>
@@ -126,7 +119,7 @@
                 <p class="card-copy" data-i18n="work.card1.copy">Building a ADS-B tracker with Raspberry Pi and SDR antenna. Receiving live flight data on 1090Mhz and visualizing it in real-time with tar 1090. Supplying data to various flight tracking services.</p>
               </div>
             </article>
-            <article class="card spotlight-card" data-spotlight-card style="--spotlight-color: rgba(255, 46, 243, 0.22);">
+            <article class="card spotlight-card cursor-target" data-spotlight-card style="--spotlight-color: rgba(255, 46, 243, 0.22);">
               <div class="spotlight-card__surface" aria-hidden="true"></div>
               <div class="card-top spotlight-card__content">
                 <p class="card-kicker" data-i18n="work.card2.kicker">2024-2025 · Operating System</p>
@@ -134,7 +127,7 @@
                 <p class="card-copy" data-i18n="work.card2.copy">Installed Asahi Linux Fedora Remix on my Apple M2 Macbook Pro 13. Customising it with lrcsnc, Hyprland, quickshell and many more. Discrovered the open source community with countless amount of APPs to choose from </p>
               </div>
             </article>
-            <article class="card spotlight-card" data-spotlight-card style="--spotlight-color: rgba(128, 150, 255, 0.24);">
+            <article class="card spotlight-card cursor-target" data-spotlight-card style="--spotlight-color: rgba(128, 150, 255, 0.24);">
               <div class="spotlight-card__surface" aria-hidden="true"></div>
               <div class="card-top spotlight-card__content">
                 <p class="card-kicker" data-i18n="work.card3.kicker">2024 · DIY Experience</p>
@@ -212,39 +205,39 @@
             <h2 data-i18n="specs.title">Computer specs</h2>
           </div>
           <div class="specs-grid">
-            <a class="spec-card" href="https://www.techpowerup.com/cpu-specs/ryzen-5-5600.c2743" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://www.techpowerup.com/cpu-specs/ryzen-5-5600.c2743" target="_blank" rel="noreferrer">
               <h3>CPU</h3>
               <p>Ryzen 5 5600 OC 4.75 GHz</p>
               <p>Apple M2 Macbook Pro 13"</p>
             </a>
-            <a class="spec-card" href="https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3875" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://www.techpowerup.com/gpu-specs/radeon-rx-6950-xt.c3875" target="_blank" rel="noreferrer">
               <h3>GPU</h3>
               <p>AMD Radeon RX 6950 XT @ 2.7 GHz</p>
             </a>
-            <a class="spec-card" href="https://www.amazon.co.uk/3200MHz-Computer-288-Pin-Asgard-Desktop/dp/B0BP9H5NWC" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://www.amazon.co.uk/3200MHz-Computer-288-Pin-Asgard-Desktop/dp/B0BP9H5NWC" target="_blank" rel="noreferrer">
               <h3>RAM</h3>
               <p>Asgard 32GB DDR4 3800Mhz OC</p>
             </a>
-            <a class="spec-card" href="https://europe.kioxia.com/en-europe/personal/ssd/exceria-plus-g3-nvme-ssd.html" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://europe.kioxia.com/en-europe/personal/ssd/exceria-plus-g3-nvme-ssd.html" target="_blank" rel="noreferrer">
               <h3 data-i18n="specs.storage">Storage</h3>
               <p>Kioxia G3 Plus 1TB </p>
               <p>Greatwall GW7000 2TB </p>
             </a>
-            <a class="spec-card" href="https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse?srsltid=AfmBOoqBGGs7ljeJFCBggqVXu22upC5ps0Z4aCq9BeQNTIl5D4IVHFSI" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://vgnlab.com/products/vgn-dragonfly-f1-series-wireless-mouse?srsltid=AfmBOoqBGGs7ljeJFCBggqVXu22upC5ps0Z4aCq9BeQNTIl5D4IVHFSI" target="_blank" rel="noreferrer">
               <h3 data-i18n="specs.peripherals">Peripherals</h3>
               <p>AULA F87 Pro</p>
               <p>Dragonfly F1 Pro 4000Hz</p>
             </a>
-            <a class="spec-card" href="https://www.amazon.co.uk/AOC-Gaming-CQ27G2S-BK-FreeSync/dp/B0C4P5R8HQ?th=1" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://www.amazon.co.uk/AOC-Gaming-CQ27G2S-BK-FreeSync/dp/B0C4P5R8HQ?th=1" target="_blank" rel="noreferrer">
               <h3 data-i18n="specs.monitor">Monitor</h3>
               <p>16" 2560x1600 240Hz</p>
               <p>27" 2560x1440 165Hz</p>
             </a>
-            <a class="spec-card" href="https://rog.asus.com/motherboards/rog-strix/rog-strix-x570-i-gaming-model/" target="_blank" rel="noreferrer">
+            <a class="spec-card cursor-target" href="https://rog.asus.com/motherboards/rog-strix/rog-strix-x570-i-gaming-model/" target="_blank" rel="noreferrer">
               <h3 data-i18n="specs.motherboard">Motherboard</h3>
               <p>ROG Strix X570-I Gaming</p>
             </a>
-            <div class="spec-card">
+            <div class="spec-card cursor-target">
               <h3 data-i18n="specs.psu">PSU</h3>
               <p>YESTARRY 650W SFX </p>
               <p>80+ Gold</p>
@@ -268,19 +261,19 @@
             <h2 data-i18n="social.title">Find me online</h2>
           </div>
           <div class="social-grid">
-            <a class="social-card" href="https://steamcommunity.com/id/xNeonCatGirlx/" target="_blank" rel="noreferrer">
+            <a class="social-card cursor-target" href="https://steamcommunity.com/id/xNeonCatGirlx/" target="_blank" rel="noreferrer">
               <span class="social-label">Steam</span>
               <span class="social-handle">@xNeonCatGirlx</span>
             </a>
-            <a class="social-card" href="https://www.instagram.com" target="_blank" rel="noreferrer">
+            <a class="social-card cursor-target" href="https://www.instagram.com" target="_blank" rel="noreferrer">
               <span class="social-label">Instagram</span>
               <span class="social-handle">@computerdavid2008</span>
             </a>
-            <a class="social-card" href="https://github.com/xNeonCatGirlx" target="_blank" rel="noreferrer">
+            <a class="social-card cursor-target" href="https://github.com/xNeonCatGirlx" target="_blank" rel="noreferrer">
               <span class="social-label">GitHub</span>
               <span class="social-handle">@xNeonCatGirlx</span>
             </a>
-            <a class="social-card" href="https://space.bilibili.com/311911658" target="_blank" rel="noreferrer">
+            <a class="social-card cursor-target" href="https://space.bilibili.com/311911658" target="_blank" rel="noreferrer">
               <span class="social-label">Bilibili</span>
               <span class="social-handle">@永远的911网管</span>
             </a>
@@ -293,6 +286,13 @@
         <span data-i18n="footer.line2">© 2025-2026 David Yang. All rights reserved.</span>
         <span data-i18n="footer.line3">Based on synthwave vibes.</span>
       </footer>
+    </div>
+    <div class="target-cursor" aria-hidden="true">
+      <span class="target-cursor__corner top-left"></span>
+      <span class="target-cursor__corner top-right"></span>
+      <span class="target-cursor__corner bottom-left"></span>
+      <span class="target-cursor__corner bottom-right"></span>
+      <span class="target-cursor__center"></span>
     </div>
   </div>
 
@@ -818,7 +818,7 @@
 
       shots.forEach((shot) => {
         const card = document.createElement('div');
-        card.className = 'shot-card';
+        card.className = 'shot-card cursor-target';
 
         const img = document.createElement('img');
         img.src = shot.src;
